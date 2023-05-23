@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+/* tutte le immagini */
+img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
 /* First megacontainer */
 .container1{
     background-color: #DADBD4;
@@ -23,40 +31,107 @@
     position: fixed;
     top: 5%;
     right: 12.5%;
-    width: 75%;
-    height: 90%;
+    width: 75vw;
+    height: 90vh;
     margin: auto;
     /* background-color: lightblue; */
     z-index: 2;
     display: flex;
 }
 
-div{
-    border: 1px solid black;
-}
 
 /* Left part of the second mega container */
 .containerLeft{
-    width: 30%;
-    height: 100%;
+    width: calc( 100% - 70%);
+    height: 90vh;
     background-color: aquamarine;
     position: relative;
 }
 
-/*  part of the left part of the 2nd megacontainer */
+/*  Upper part of the left part of the 2nd megacontainer */
 .containerFixedInLeft{
-    height: 30%;
+    min-height: calc(90vh / 4);
     width: 100%;
     background-color: cornflowerblue;
 }
 
+#favourites{
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+#favourites > img{
+    margin-right: 0.5rem;
+}
+
+
+#favourites{
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: #EAEAEA;
+}
+
+#notifification{
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: #8DDAFC;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+#notifification > i {
+    color: #8DDAFC;
+    background-color: white;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    min-height: calc(100% / 6);
+    margin: 0 auto;
+    padding: 0.4rem;
+    background-color: #eaeaea;
+    border-radius: 0.35rem;
+  }
+  
+  .search-bar input[type="text"] {
+    flex: 1;
+    padding: 0.35rem;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .search-bar button[type="submit"] {
+    padding:  0.35rem 0.7rem;
+    background-color: #00978800;
+    color: #B2B2B0;
+    border: none;
+    border-radius:  0.35rem;
+    cursor: pointer;
+  }
+
 /* Lower part of the left part of the 2nd megacontainer */
 #contacts{
     width: 100%;
-    height: 70%;
-    background-color: darkkhaki;
+    height: calc(90vh - 25%);
+    background-color: #FFFFFF;
     overflow: auto;
 }
+
+.userAcquitance{
+    display: flex;
+    align-items: center;
+    height: calc(100% / 7);
+    border-bottom: 1px solid #000;
+}
+
 
 /* Right part of the second mega container */
 .containerRight{
@@ -65,28 +140,32 @@ div{
     background-color: burlywood;
 }
 
-#favourites{
-    width: 100%;
-    height: calc(100% / 3);
-    background-color: crimson;
-}
-
-#notifification{
-    width: 100%;
-    height: calc(100% / 3);
-    background-color:darksalmon;
-}
-
-#search{
-    width: 100%;
-    height: calc(100% / 3);
-    background-color: darkslategrey;
-}
+  
 
 .containerFixedTopInRight{
     width: 100%;
     height: 10%;
-    background-color: darkolivegreen;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cftirL{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.cftirL > img{
+    margin-right: 0.5rem;
+}
+
+.cftirR{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
 }
 
 .messageConversation{
@@ -100,4 +179,12 @@ div{
     width: 100%;
     height: 10%;
     background-color: aquamarine;
+}
+
+
+/* !DEBUG */
+
+
+div{
+    border: 1px solid black;
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Boolzap</title>
 </head>
 <body>
@@ -17,12 +18,32 @@
         <div class="container2">
             <div class="containerLeft">
                 <div class="containerFixedInLeft">
-                    <div id="favourites"></div>
-                    <div id="notifification"></div>
-                    <div id="search"></div>
+                    <div id="favourites">
+                        <img src="/img/download2.jpg" alt="immagine 2">
+                        <h4>Sabrina</h4>
+                    </div>
+                    <div id="notifification">
+                        <i class="fa-solid fa-bell-slash"></i>
+                        <div>
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            <p>attiva notifiche desktop </p>
+                        </div>
+                    </div>
+                    <div class="search-bar">
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
                 </div>
                 <div id="contacts">
-                    <div class="userAcquitance"></div>
+                    <div class="userAcquitance">
+                        <img src="/img/download3.jpg" alt="immagine 3" srcset="">
+                        <div>
+                            <h4>Sasha</h4>
+                            <p>Ultimo accesso oggi alle 13:05:36</p>
+                        </div>
+                    </div>
                     <div class="userAcquitance"></div>
                     <div class="userAcquitance"></div>
                 </div>
@@ -30,14 +51,16 @@
             <div class="containerRight">
                 <div class="containerFixedTopInRight">
                     <div class="cftirL">
-                        <img src="" alt="">
+                        <img src="/img/download1.jpg" alt="immagine 1">
                         <div>
-                            <h4></h4>
-                            <p></p>
+                            <h4>Sasha</h4>
+                            <p>Ultimo accesso oggi alle 13:05:36</p>
                         </div>
                     </div>
                     <div class="cftirR">
-                        "search, append, menu"
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
                 <div class="messageConversation"></div>
@@ -57,6 +80,7 @@
     
 
 </main>    
+
 <script src="logic.js"></script>
 </body>
 </html>
