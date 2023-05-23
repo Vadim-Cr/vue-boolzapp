@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* First megacontainer */
+.container1{
+    background-color: #DADBD4;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+/* green stripe in the first megacontaier */
+#greenTop{
+    background-color: #009788;
+    height: 15%;
+}
+
+/* the second mega container, here we have the content */
+.container2{
+    position: fixed;
+    top: 5%;
+    right: 12.5%;
+    width: 75%;
+    height: 90%;
+    margin: auto;
+    /* background-color: lightblue; */
+    z-index: 2;
+    display: flex;
+}
+
+div{
+    border: 1px solid black;
+}
+
+/* Left part of the second mega container */
+.containerLeft{
+    width: 30%;
+    height: 100%;
+    background-color: aquamarine;
+    position: relative;
+}
+
+/*  part of the left part of the 2nd megacontainer */
+.containerFixedInLeft{
+    height: 30%;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+
+/* Lower part of the left part of the 2nd megacontainer */
+#contacts{
+    width: 100%;
+    height: 70%;
+    background-color: darkkhaki;
+    overflow: auto;
+}
+
+/* Right part of the second mega container */
+.containerRight{
+    width: 70%;
+    height: 100%;
+    background-color: burlywood;
+}
+
+#favourites{
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: crimson;
+}
+
+#notifification{
+    width: 100%;
+    height: calc(100% / 3);
+    background-color:darksalmon;
+}
+
+#search{
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: darkslategrey;
+}
+
+.containerFixedTopInRight{
+    width: 100%;
+    height: 10%;
+    background-color: darkolivegreen;
+}
+
+.messageConversation{
+    width: 100%;
+    height: calc(100% - 10% - 10%);
+    background-color: chartreuse;
+    overflow: auto;
+}
+
+.containerFixedBottomInRight{
+    width: 100%;
+    height: 10%;
+    background-color: aquamarine;
+}
