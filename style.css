@@ -50,15 +50,18 @@ img{
 
 /*  Upper part of the left part of the 2nd megacontainer */
 .containerFixedInLeft{
-    min-height: calc(90vh / 4);
+    height:25vh;
     width: 100%;
-    background-color: cornflowerblue;
+    background-color: rgb(163, 209, 57);
 }
 
 #favourites{
     display: flex;
     align-items: center;
+    height: 10vh;
+    width: 100%;
     padding: 0 1rem;
+    background-color: #EAEAEA;
 }
 
 #favourites > img{
@@ -66,15 +69,9 @@ img{
 }
 
 
-#favourites{
-    width: 100%;
-    height: calc(100% / 3);
-    background-color: #EAEAEA;
-}
-
 #notifification{
     width: 100%;
-    height: calc(100% / 3);
+    height: 10vh;
     background-color: #8DDAFC;
     display: flex;
     align-items: center;
@@ -94,7 +91,7 @@ img{
     display: flex;
     align-items: center;
     max-width: 100%;
-    min-height: calc(100% / 6);
+    height: 5vh;
     margin: 0 auto;
     padding: 0.4rem;
     background-color: #eaeaea;
@@ -120,7 +117,7 @@ img{
 /* Lower part of the left part of the 2nd megacontainer */
 #contacts{
     width: 100%;
-    height: calc(90vh - 25%);
+    height: 65vh;
     background-color: #FFFFFF;
     overflow: auto;
 }
@@ -132,11 +129,16 @@ img{
     border-bottom: 1px solid #000;
 }
 
+.userAcquitance:hover{
+    background-color: #B2B2B0;
+    color: red;
+}
+
 
 /* Right part of the second mega container */
 .containerRight{
     width: 70%;
-    height: 100%;
+    height: 90vh;
     background-color: burlywood;
 }
 
@@ -144,7 +146,7 @@ img{
 
 .containerFixedTopInRight{
     width: 100%;
-    height: 10%;
+    height: 10vh;
     background-color: #EAEAEA;
     display: flex;
     justify-content: space-between;
@@ -170,14 +172,53 @@ img{
 
 .messageConversation{
     width: 100%;
-    height: calc(100% - 10% - 10%);
-    background-color: chartreuse;
+    height: 70vh;
+    background-color: #DFD6CF;
+    background-image: url(/img/official-whatsapp-background-image.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
+
+.myMessageContainer{
+    display: flex;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.yourMessageContainer{
+    display: flex;
+    justify-content: start;
+    padding: 1rem;
+
+}
+
+
+.myMessage {
+    background-color: #D5F9BB;
+    padding: 0.5rem 1rem;
+    max-width: 45%;
+    border-radius: 0.75rem;
+  }
+  
+  .yourMessage {
+        /* Align items to the left */
+        justify-content: flex-start;
+        background-color: #FFFFFF;
+        padding: 0.5rem 1rem;
+        padding: 0.5rem 1rem;
+        max-width: 45%; 
+        border-radius: 0.75rem;
+  }
+
+
 
 .containerFixedBottomInRight{
     width: 100%;
-    height: 10%;
+    height: 10vh;
     background-color: aquamarine;
 }
 
