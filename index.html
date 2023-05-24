@@ -9,18 +9,17 @@
     <title>Boolzap</title>
 </head>
 <body>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <main>
 
-    <div class="container1">
+    <div id="App" class="container1">
         <div id="greenTop"></div>
         <div class="container2">
             <div class="containerLeft">
                 <div class="containerFixedInLeft">
                     <div id="favourites">
-                        <img src="/img/download2.jpg" alt="immagine 2">
-                        <h4>Sabrina</h4>
+                        <img :src="contacts[0].avatar" alt="immagine 2">
+                        <h4>{{contacts[0].name}}</h4>
                     </div>
                     <div id="notifification">
                         <i class="fa-solid fa-bell-slash"></i>
@@ -113,10 +112,10 @@
             <div class="containerRight">
                 <div class="containerFixedTopInRight">
                     <div class="cftirL">
-                        <img src="/img/download1.jpg" alt="immagine 1">
+                        <img :src="contacts[1].avatar" alt="immagine 1">
                         <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
+                            <h4>{{contacts[1].name}}</h4>
+                            <p>Ultimo accesso  {{contacts[1].messages[0].date}}</p>
                         </div>
                     </div>
                     <div class="cftirR">
@@ -188,6 +187,7 @@
     
 
 </main>    
+
 
 <script src="logic.js"></script>
 </body>
