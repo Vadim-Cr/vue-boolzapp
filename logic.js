@@ -74,7 +74,7 @@ createApp({
             },
             {
                 name: 'Alessandro B.',
-                avatar: '/img/download3.jpg',
+                avatar: '/img/download4.jpg',
                 visible: true,
                 messages: [
                     {
@@ -90,8 +90,8 @@ createApp({
                 ],
             },
             {
-                name: 'Alessandro L.',
-                avatar: '/img/download4.jpg',
+                name: 'Alessandra L.',
+                avatar: '/img/download5.jpg',
                 visible: true,
                 messages: [
                     {
@@ -108,7 +108,7 @@ createApp({
             },
             {
                 name: 'Claudia',
-                avatar: '/img/download5.jpg',
+                avatar: '/img/download6.jpg',
                 visible: true,
                 messages: [
                     {
@@ -130,7 +130,7 @@ createApp({
             },
             {
                 name: 'Federico',
-                avatar: '/img/download6.jpg',
+                avatar: '/img/download7.jpg',
                 visible: true,
                 messages: [
                     {

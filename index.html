@@ -36,76 +36,14 @@
                     </div>
                 </div>
                 <div id="contacts">
-                    <div class="userAcquitance">
-                        <img src="/img/download3.jpg" alt="immagine 3">
+                    <div v-for="(contact, indx) in contacts" class="userAcquitance">
+                        <img :src="contact.avatar" :alt="contact.name">
                         <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
+                          <h4>{{ contact.name }}</h4>
+                          <p>{{ contact.messages[0].date }}</p>
                         </div>
-                    </div>
-                    <div class="userAcquitance">
-                        <img src="/img/download4.jpg" alt="immagine 4">
-                        <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
-                        </div>
-                    </div>
-                    <div class="userAcquitance">
-                        <img src="/img/download5.jpg" alt="immagine 5">
-                        <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
-                        </div>
-                    </div>
-                    <div class="userAcquitance">
-                        <img src="/img/download6.jpg" alt="immagine 6">
-                        <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
-                        </div>
-                    </div>
-                    <div class="userAcquitance">
-                        <img src="/img/download7.jpg" alt="immagine 7">
-                        <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
-                        </div>
-                    </div>
-                    <div class="userAcquitance">
-                        <img src="/img/download1.jpg" alt="immagine 8">
-                        <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
-                        </div>
-                    </div>
-                    <div class="userAcquitance">
-                        <img src="/img/download2.jpg" alt="immagine 9">
-                        <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
-                        </div>
-                    </div>
-                    <div class="userAcquitance">
-                        <img src="/img/download3.jpg" alt="immagine 10">
-                        <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
-                        </div>
-                    </div>
-                    <div class="userAcquitance">
-                        <img src="/img/download4.jpg" alt="immagine 11">
-                        <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
-                        </div>
-                    </div>
-                    <div class="userAcquitance">
-                        <img src="/img/download5.jpg" alt="immagine 12">
-                        <div>
-                            <h4>Sasha</h4>
-                            <p>Ultimo accesso oggi alle 13:05:36</p>
-                        </div>
-                    </div>
+                      </div>
+                      
                 </div>
                 
             </div>
