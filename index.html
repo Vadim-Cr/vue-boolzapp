@@ -17,6 +17,7 @@
         <div class="container2">
             <div class="containerLeft">
                 <div class="containerFixedInLeft">
+                    <!-- Added through VUE the first person of the array  -->
                     <div id="favourites">
                         <img :src="contacts[0].avatar" alt="immagine 2">
                         <h4>{{contacts[0].name}}</h4>
@@ -36,16 +37,15 @@
                     </div>
                 </div>
                 <div id="contacts">
-                    <div v-for="(contact, indx) in contacts" class="userAcquitance">
+                    <!-- reapeted the div n=indx times with a different picture, name and text every time -->
+                    <div v-for="(contact, indx) in contacts" class="userAcquitance" @click="acquitanceConversation">
                         <img :src="contact.avatar" :alt="contact.name">
                         <div>
                           <h4>{{ contact.name }}</h4>
                           <p>{{ contact.messages[0].date }}</p>
                         </div>
-                      </div>
-                      
+                    </div>
                 </div>
-                
             </div>
             <div class="containerRight">
                 <div class="containerFixedTopInRight">
@@ -63,50 +63,30 @@
                     </div>
                 </div>
                 <div class="messageConversation">
-                    <div class="myMessageContainer">
-                        <div class="myMessage"> lor
-                            Ciao Come va?</div>
+
+                    <div v-for="(contact, contactIndex) in contacts">
+                        <div v-for="(message, messageIndex) in contact.messages" 
+                             :class="{'myMessageContainer': message.status === 'myMessage', 
+                                      'yourMessageContainer': message.status === 'yourMessage'}">
+                                      <div :class="{'myMessage': message.status === 'myMessage', 
+                                      'yourMessage': message.status === 'yourMessage'}">
+                                          {{ message.message }}
+                                      </div>
+                        </div>
                     </div>
+                    
+                      
                     <div class="myMessageContainer">
                         <div class="myMessage"> lor
-                            Ciao Come va?</div>
+                            Ciao Come va?
+                        </div>
                     </div>
                     <div class="yourMessageContainer">
-                        <div class="yourMessage">ciao <br>  Bene, tu? <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores debitis labore amet excepturi dolor dolorum quisquam aperiam nesciunt blanditiis aliquid voluptate omnis earum, natus aliquam sit velit voluptatum, vero incidunt.</div>
+                        <div class="yourMessage">
+                            ciao <br>  Bene, tu? <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores debitis labore amet excepturi dolor dolorum quisquam aperiam nesciunt blanditiis aliquid voluptate omnis earum, natus aliquam sit velit voluptatum, vero incidunt.
+                        </div>
                     </div>
-                    <div class="myMessageContainer">
-                        <div class="myMessage"> lor
-                            Ciao Come va?</div>
-                    </div>
-                    <div class="myMessageContainer">
-                        <div class="myMessage"> lor
-                            Ciao Come va?</div>
-                    </div>
-                    <div class="yourMessageContainer">
-                        <div class="yourMessage">ciao <br>  Bene, tu? <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores debitis labore amet excepturi dolor dolorum quisquam aperiam nesciunt blanditiis aliquid voluptate omnis earum, natus aliquam sit velit voluptatum, vero incidunt.</div>
-                    </div>
-                    <div class="myMessageContainer">
-                        <div class="myMessage"> lor
-                            Ciao Come va?</div>
-                    </div>
-                    <div class="myMessageContainer">
-                        <div class="myMessage"> lor
-                            Ciao Come va?</div>
-                    </div>
-                    <div class="yourMessageContainer">
-                        <div class="yourMessage">ciao <br>  Bene, tu? <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores debitis labore amet excepturi dolor dolorum quisquam aperiam nesciunt blanditiis aliquid voluptate omnis earum, natus aliquam sit velit voluptatum, vero incidunt.</div>
-                    </div>
-                    <div class="myMessageContainer">
-                        <div class="myMessage"> lor
-                            Ciao Come va?</div>
-                    </div>
-                    <div class="myMessageContainer">
-                        <div class="myMessage"> lor
-                            Ciao Come va?</div>
-                    </div>
-                    <div class="yourMessageContainer">
-                        <div class="yourMessage">ciao <br>  Bene, tu? <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores debitis labore amet excepturi dolor dolorum quisquam aperiam nesciunt blanditiis aliquid voluptate omnis earum, natus aliquam sit velit voluptatum, vero incidunt.</div>
-                    </div>
+                    
 
                 </div>
                 <div class="containerFixedBottomInRight">
